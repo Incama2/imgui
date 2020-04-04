@@ -23,8 +23,13 @@ project "ImGui"
         "examples/imgui_impl_dx11.h",
         "examples/imgui_impl_win32.h",
         "examples/imgui_impl_win32.h",
-
     }
+
+	includedirs
+	{
+        "examples/",
+        "/"
+	}
     
 	filter "system:windows"
         systemversion "latest"
