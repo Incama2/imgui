@@ -22,6 +22,12 @@ project "ImGui"
         "imgui_impl_win32.cpp",
         "imgui_impl_win32.h",
     }
+
+	includedirs
+	{
+        "examples/",
+        "/"
+	}
     
     systemversion "latest"
     cppdialect "C++17"
