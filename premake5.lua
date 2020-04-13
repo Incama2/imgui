@@ -4,7 +4,7 @@ project "ImGui"
     
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-
+    
 	files
 	{
         "imconfig.h",
@@ -17,19 +17,15 @@ project "ImGui"
         "imstb_textedit.h",
         "imstb_truetype.h",
         "imgui_demo.cpp",
-        "examples/imgui_impl_dx12.cpp",
-        "examples/imgui_impl_dx12.h",
-        "examples/imgui_impl_dx11.cpp",
-        "examples/imgui_impl_dx11.h",
-        "examples/imgui_impl_win32.h",
-        "examples/imgui_impl_win32.h",
-
+        "imgui_impl_dx11.cpp",
+        "imgui_impl_dx11.h",
+        "imgui_impl_win32.cpp",
+        "imgui_impl_win32.h",
     }
     
-	filter "system:windows"
-        systemversion "latest"
-        cppdialect "C++17"
-        staticruntime "On"
+    systemversion "latest"
+    cppdialect "C++17"
+    staticruntime "On"
         
-    filter { "system:windows", "configurations:Release" }
+    filter "configurations:Release"
         buildoptions "/MT"
